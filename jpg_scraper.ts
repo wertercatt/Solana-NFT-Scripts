@@ -111,7 +111,7 @@ const getMintAddresses = async (firstCreatorAddress: PublicKey) => {
         url: url,
         responseType: "stream"
       }).then(function (response) {
-        response.data.pipe(fs.createWriteStream(dir + "/" + mintAddr[i] + "." + type.substring(type.indexOf('/') + 1)));
+        response.data.pipe(fs.createWriteStream(dir + "/" + name + "." + type.substring(type.indexOf('/') + 1)));
       });
     } catch(error) {
       console.log("(" + (i+1) + "/" + mintLen + ") DOWNLOADING: " + "ERROR SKIPPING");

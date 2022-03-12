@@ -67,7 +67,6 @@ const getMintAddresses = async (firstCreatorAddress: PublicKey) => {
       });
    }
 
-   let ret_json:any = []
    let success = true;
 
    if (!fs.existsSync("./metadata")){
@@ -85,7 +84,6 @@ const getMintAddresses = async (firstCreatorAddress: PublicKey) => {
      fs.writeFile ("./metadata/" + config.data.mint_id + "/" + result.data.name + ".json", JSON.stringify(result.data), function(err:any) {
 	     if (err) throw err;
      });
-     ret_json.push(result.data);
      success = true;
    } catch {
      if (success == true) {
