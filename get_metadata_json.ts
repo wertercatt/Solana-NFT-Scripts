@@ -70,12 +70,21 @@ const getMintAddresses = async (firstCreatorAddress: PublicKey) => {
    let ret_json:any = []
    let success = true;
 
+   if (!fs.existsSync("./metadata")){
+	   fs.mkdirSync("./metadata");
+   }
+   if (!fs.existsSync("./metadata/" + config.data.mint_id + "/")){
+	   fs.mkdirSync("./metadata/" + config.data.mint_id + "/");
+   }
    for (let i = 0; i < mintAddr.length; i++) {
      try {
      console.log("(" + (i+1) + "/" + mintAddr.length + ") Fetching " + mintAddr[i]);
      const metadataPDA = await Metadata.getPDA(new PublicKey(mintAddr[i]));
      const tokenMetadata = await Metadata.load(connection, metadataPDA);
      const result = await axios.get(tokenMetadata.data.data.uri)
+     fs.writeFile ("./metadata/" + config.data.mint_id + "/" + result.data.name + ".json", JSON.stringify(result.data), function(err:any) {
+	     if (err) throw err;
+     });
      ret_json.push(result.data);
      success = true;
    } catch {
@@ -87,16 +96,4 @@ const getMintAddresses = async (firstCreatorAddress: PublicKey) => {
      continue;
    }
    }
-
-   let save_json = {metadata: ret_json};
-
-   if (!fs.existsSync("./metadata")){
-     fs.mkdirSync("./metadata");
-   }
-
-   fs.writeFile ("./metadata/" + config.data.mint_id + ".json", JSON.stringify(save_json), function(err:any) {
-    if (err) throw err;
-    });
-    console.log("Metadata Written");
-
 })()

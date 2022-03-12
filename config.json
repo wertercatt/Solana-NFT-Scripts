@@ -1,8 +1,8 @@
 {
   "data": {
     "RPC": "https://ssc-dao.genesysgo.net",
-    "mint_id": "ENTER-MINT-ADDR-HERE",
-    "reverse_img_filename": "IMAGE-FILENAME-HERE",
+    "mint_id": "HKtAPN498Ay1MUEMCGC1sLPwpdTE2E2QWmHru1VzSfUu",
+    "reverse_img_filename": "Clark.jpg",
     "reverse_img_attr_filters": [
     ]
   }
