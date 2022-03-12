@@ -81,7 +81,7 @@ const getMintAddresses = async (firstCreatorAddress: PublicKey) => {
      const metadataPDA = await Metadata.getPDA(new PublicKey(mintAddr[i]));
      const tokenMetadata = await Metadata.load(connection, metadataPDA);
      const result = await axios.get(tokenMetadata.data.data.uri)
-     fs.writeFile ("./metadata/" + config.data.mint_id + "/" + result.data.name + ".json", JSON.stringify(result.data), function(err:any) {
+     fs.writeFile ("./metadata/" + config.data.mint_id + "/" + result.data.name + ".json", JSON.stringify(result.data, null, "\t"), function(err:any) {
 	     if (err) throw err;
      });
      success = true;
