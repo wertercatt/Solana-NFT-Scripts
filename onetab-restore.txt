@@ -1,0 +1,6 @@
+https://stackoverflow.com/questions/38148101/accessing-json-object-properties-directly-and-log-it | typescript - Accessing JSON object properties directly and log it - Stack Overflow
+https://github.com/wertercatt/Solana-NFT-Scripts/commit/ba1e0128b5fbfa6d797d59de86e4d9bf132dd3c2 | Write funged tokens to individual files · wertercatt/Solana-NFT-Scripts@ba1e012
+https://stackoverflow.com/questions/62730880/how-parse-json-response-with-axios-and-typescript-to-pascalcase-model | How parse JSON response with axios and TypeScript to PascalCase model? - Stack Overflow
+https://solscan.io/token/5KegG5oiVCMhGdtqpKDQKFNQHVasX8UFNEKJiZjdw98Q#metadata | Solscan
+https://www.codegrepper.com/code-examples/javascript/write+to+a+json+file+using+typescript | write to a json file using typescript Code Example
+https://www.w3docs.com/learn-git/gitignore.html | .gitignore - Ignoring Files In Git | W3Docs Git Tutorial
